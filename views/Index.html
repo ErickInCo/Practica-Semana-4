@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex LaunchX</title>
+    
+</head>
+
+<body>
+    <h1>Pokedex</h1>
+    <div class="table-responsive">
+        
+            <table class="table">
+                <tr>
+                    <td>
+                        <label>Numero de pokemon:</label>
+                        
+                    </td>
+                    <td>
+                        <input type="text" id="Npoke" name="Npoke">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="Sprite" src="../assets/img/ditto.png">
+                    </td>
+                </tr>
+                <tr>
+                    <button onclick="fetchPokemon()">Buscar</button>
+                </tr>
+            </table>
+        
+
+        
+    </div>
+    <!-- <div class="table-responsive">
+        <table class="table">
+            <tr>
+                <td><h1>Bunny Cakes</h1></td>
+                <td><img src="..\assets\img\logo.png" ></td>
+                <td><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></td>
+            </tr>
+        </table>
+    </div>
+    
+    
+    <h2>Pasteles esponjosos y llenos de magia</h2>
+    
+    <br>
+    
+
+    <div id="id01" class="modal">
+    
+    <form class="modal-content animate" action="Admin.html" method="post">
+        <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="..\assets\img\logo.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+            
+        <button type="submit">Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+    </div>
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+    <br>
+    <div class="table-responsive">
+
+        <table class="table">
+            <tr>
+                <td>
+                    <h2>Nuestros Pasteles</h2>
+                    <dl>
+                        <dt>Pastel Besos de Fresa</dt>
+                        <dd>$270</dd>
+                        <dt>Pastel ALEMÁN</dt>
+                        <dd>$270</dd>
+                        <dt>Pastel Mil Hojas</dt>
+                        <dd>$290</dd>
+                        <dt>Pastel Capuchino</dt>
+                        <dd>$420</dd>
+                        <dt>Pastel Tres Leches</dt>
+                        <dd>$380</dd>
+                        <dt>Pastel Carlos V</dt>
+                        <dd>$430</dd>
+                        <dt>Pastel de Zanahoria</dt>
+                        <dd>$395</dd>
+                        <dt>Pastel Tres Chocolates</dt>
+                        <dd>$435</dd>
+                        <dt>Pastel Red Velvet</dt>
+                        <dd>$400</dd>
+                    </dl>
+                </td>
+                
+                <td>
+                    <h2>Nuestros Adornos</h2>
+                    <dl>
+                        <dt>Fresas</dt>
+                        <dd>$50</dd>
+                        <dt>Fondant Liso</dt>
+                        <dd>$30</dd>
+                        <dt>Fondant con figuras</dt>
+                        <dd>$100</dd>
+                        <dt>Chispas</dt>
+                        <dd>$20</dd>
+                        <dt>Nueces</dt>
+                        <dd>$50</dd>
+
+                    </dl>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <br>
+    <div class="table-responsive">
+        <h2>Haga su pedido</h2>
+    <form >
+        <fieldset>
+            <legend>Pedidos</legend>
+            <table class="table">
+                <tr>
+                    <td>
+                        <label for="Nombre">Nombre:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="nombre" name="nombre">
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Telefono">Telefono:</label>
+                    </td>
+                    <td>
+                        <input type="tel" id="Telefono" name="Telefono">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="correo">Correo electronico:</label>
+                    </td>
+                    <td>
+                        <input type="email" id="correo" name="correo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Pasteles">Selecciones uno de nuestros pasteles:</label>
+                    </td>
+                    <td>
+                        <select id="Pasteles" name="Pasteles">
+                            <option value="Pastel Besos de Fresa">Pastel Besos de Fresa</option>
+                            <option value="Pastel ALEMÁN">Pastel ALEMÁN</option>
+                            <option value="Pastel Mil Hojas">Pastel Mil Hojas</option>
+                            <option value="Pastel Capuchino">Pastel Capuchino</option>
+                            <option value="Pastel Tres Leches">Pastel Tres Leches</option>
+                            <option value="Pastel Carlos V">Pastel Carlos V</option>
+                            <option value="Pastel de Zanahoria">Pastel de Zanahoria</option>
+                            <option value="Pastel Tres Chocolates">Pastel Tres Chocolates</option>
+                            <option value="Pastel Red Velvet">Pastel Red Velvet</option>
+                            <option value="Personalizado">Personalizado</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table">
+                <tr>
+                    <td>
+                        <label for="Ncapas">Numero de capas en el pastel:</label>
+                        <input type="number" id="NCapas" name="NCapas">
+                        <br>
+                        <label for="sabores">Seleccione el sabor o sabores:</label>
+                        <br>
+                        <input type="checkbox" id="sabor1" name="sabor1" value="Vainilla">
+                        <label for="sabor1"> Vainilla</label><br>
+                        <input type="checkbox" id="sabor2" name="sabor2" value="Chocolate">
+                        <label for="sabor2"> Chocolate</label><br>
+                        <input type="checkbox" id="sabor3" name="sabor3" value="Red Velvet">
+                        <label for="sabor3"> Red Velvet</label><br>
+                        <input type="checkbox" id="sabor2" name="sabor4" value="Zanahoria">
+                        <label for="sabor4"> Zanahoria</label><br>
+                        <input type="checkbox" id="sabor2" name="sabor5" value="Tres Leches">
+                        <label for="sabor5"> Tres Leches</label><br>
+                        <input type="checkbox" id="sabor2" name="sabor6" value="Tres Chocolates">
+                        <label for="sabor6"> Tres Chocolates</label><br>
+                    </td>
+                    <td>
+                        <label for="Nadornos">Adornos en el pastel:</label>
+                        <input type="number" id="Nadornos" name="Nadornos">
+                        <br>
+                        <label for="Adornos">Seleccione los adornos:</label>
+                        <br>
+                        <input type="checkbox" id="Adornos1" name="Adornos1" value="Fresas">
+                        <label for="Adornos1"> Fresas</label><br>
+                        <input type="checkbox" id="Adornos2" name="Adornos2" value="Fondant Liso">
+                        <label for="Adornos2"> Fondant Liso</label><br>
+                        <input type="checkbox" id="Adornos3" name="Adornos3" value="Fondant con figuras">
+                        <label for="Adornos3"> Fondant con figuras</label><br>
+                        <input type="checkbox" id="Adornos2" name="Adornos4" value="Chispas">
+                        <label for="Adornos4"> Chispas</label><br>
+                        <input type="checkbox" id="Adornos2" name="Adornos5" value="Nueces">
+                        <label for="Adornos5"> Nueces</label><br>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            <br>
+            <label for="Descripcion">Descripcion:</label>
+            <input type="text" id="des" name="des">
+            <br>
+            <input type="submit" class="submit">
+        </fieldset>
+        
+    </form>
+    </div>
+    
+    <br>
+    <h2>Conocenos</h2>
+    <p>Nos encontramos en Jesús Elías Piña 525, Las Adelitas, 87049 Cd Victoria, Tamps.</p>
+    <br>
+    <p>Telefono: 8342266772</p>
+     -->
+     <script src="../js/pokedexLX.js"></script>
+    </body>
+</html>
