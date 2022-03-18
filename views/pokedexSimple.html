@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex LaunchX</title>
+    <link rel="stylesheet" href="..\styles\pokedex.css">
+</head>
+
+<body>
+    <div id="root">
+        <div class="pokedex">
+            <div class="panel left-panel">
+                <div id="idnombre" class="pokemon-name screen">Pokedex LaunchX</div>
+                <div><img id="Sprite" src="../assets/img/master.jpg"
+                        alt="pokemon" class="pokemon-sprite">
+                    
+                </div>
+                <div id="idhabilidades" class="pokemon-description screen"></div>
+            </div>
+            <div class="divider">
+                <div class="gap"></div>
+                <div class="hinge"></div>
+                <div class="gap"></div>
+                <div class="hinge"></div>
+                <div class="gap"></div>
+                <div class="hinge"></div>
+                <div class="gap"></div>
+            </div>
+            <div class="panel right-panel">
+                <div class="panel-row">
+                    <div class="screen stats">
+                        <div id="datoshp" class="stat-line">
+                            hp................00</div>
+                        <div id="datosat" class="stat-line">
+                            attack............00</div>
+                        <div id="datosdf" class="stat-line">
+                            defense...........00</div>
+                        <div id="datossa" class="stat-line">
+                            special-attack....00</div>
+                        <div id="datossd" class="stat-line">
+                            special-defense...00</div>
+                        <div id="datossp" class="stat-line">
+                            speed.............00</div>
+                    </div>
+                    <div class="type-list">
+                        <div class="panel-header">Types</div>
+                        <div class="type-box">
+                            <div id="st1" class="type "></div>
+                            <div id="st2" class="type "></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-row blue-buttons">
+                    <div class="blue-button"></div>
+                    <div class="blue-button"></div>
+                    <div class="blue-button"></div>
+                    <div class="blue-button"></div>
+                    <div class="blue-button"></div>
+                    <div class="blue-button"></div>
+                    <div class="blue-button"></div>
+                    <div class="blue-button"></div>
+                    <div class="blue-button"></div>
+                    <div class="blue-button"></div>
+                </div>
+                <div class="move-list">
+                    <div class="move-body move-screen screen">
+                        <div class="move-left">
+                            <div id="datomn" class="move-name">growl</div>
+                            <div id="datoac" class="move-stat">
+                                Accuracy.....100</div>
+                            <div id="datopo" class="move-stat">
+                                Power.........xx</div>
+                            <div id="datopp" class="move-stat">
+                                PP............40</div>
+                        </div>
+                        <div class="move-right">
+                            <div id="datotipo" class=""></div>
+                            <!-- <div class="">Learn: Lvl 1</div> -->
+                        </div>
+                    </div>
+                    <div class="move-controls">
+                        <div class="move-arrow" onclick="previousMove()"><i class="fas fa-caret-up"></i></div>
+                        <div class="move-arrow" onclick="nextMove()"><i class="fas fa-caret-down"></i></div>
+                    </div>
+                </div>
+                <div class="panel-row controls">
+                    <div class="button" onclick="previousPokemon()"></div>
+                    <div><input id="Npoke" type="name" class="screen num-input" value="1">
+
+                        <div class="submit" onclick="fetchPokemon()">Buscar</div>
+                    </div>
+                    <div class="button" onclick="nextPokemon()"></div>
+                </div>
+                <div><input id="Nmove" type="hidden" value="0" ></div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/pokedexLX.js"></script>
+</body>
+
+</html>
